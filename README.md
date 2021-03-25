@@ -1,2 +1,2 @@
-# myairmedcustomview
+# MyAirmedCustomView
 MyAirmed Custom View Library
