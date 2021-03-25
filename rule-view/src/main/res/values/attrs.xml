@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Common Attributes-->
+    <!--Background color-->
+    <attr name="zjun_bgColor" format="reference|color" />
+    <!--scale color-->
+    <attr name="zjun_gradationColor" format="reference|color" />
+    <!--Scale font color-->
+    <attr name="zjun_textColor" format="reference|color" />
+    <!--Scale font size-->
+    <attr name="zjun_textSize" format="reference|dimension" />
+    <!--The color of the middle pointer line-->
+    <attr name="zjun_indicatorLineColor" format="reference|color" />
+    <!--The width of the middle pointer line-->
+    <attr name="zjun_indicatorLineWidth" format="reference|dimension" />
+
+    <!--Ordinary tape measure control-->
+    <declare-styleable name="RuleView">
+        <!--Background color-->
+        <attr name="zjun_bgColor" />
+        <!--scale color-->
+        <attr name="zjun_gradationColor" />
+        <!--Short tick width-->
+        <attr name="gv_shortLineWidth" format="reference|dimension" />
+        <!--Long scale line width-->
+        <attr name="gv_longLineWidth" format="reference|dimension" />
+        <!--Short scale length-->
+        <attr name="gv_shortGradationLen" format="reference|dimension" />
+        <!--Long scale length-->
+        <attr name="gv_longGradationLen" format="reference|dimension" />
+        <!--Scale font color-->
+        <attr name="zjun_textColor" />
+        <!--Scale font size-->
+        <attr name="zjun_textSize" />
+        <!--The color of the middle pointer line-->
+        <attr name="zjun_indicatorLineColor" />
+        <!--The width of the middle pointer line-->
+        <attr name="zjun_indicatorLineWidth" />
+        <!--Middle pointer line length-->
+        <attr name="gv_indicatorLineLen" format="reference|dimension" />
+        <!--Minimum value-->
+        <attr name="gv_minValue" format="reference|float" />
+        <!--Maximum value-->
+        <attr name="gv_maxValue" format="reference|float" />
+        <!--Current value-->
+        <attr name="gv_currentValue" format="reference|float" />
+        <!--Minimum scale unit-->
+        <attr name="gv_gradationUnit" format="reference|float" />
+        <!--The minimum number of units between the values that need to be drawn-->
+        <attr name="gv_numberPerCount" format="reference|integer" />
+        <!--Distance between scales-->
+        <attr name="gv_gradationGap" format="reference|dimension" />
+        <!--Spacing between scale and text-->
+        <attr name="gv_gradationNumberGap" format="reference|dimension" />
+    </declare-styleable>
+
+    <!--Amount selection tape measure control-->
+    <declare-styleable name="MoneySelectRuleView">
+        <!--Background color-->
+        <attr name="zjun_bgColor" />
+        <!--scale color-->
+        <attr name="zjun_gradationColor" />
+        <!--Total height of scale and value-->
+        <attr name="msrv_gradationHeight" format="dimension|reference"/>
+        <!--Short scale length-->
+        <attr name="msrv_gradationShortLen" format="dimension|reference"/>
+        <!--Long scale length-->
+        <attr name="msrv_gradationLongLen" format="dimension|reference"/>
+        <!--Short scale width-->
+        <attr name="msrv_gradationShortWidth" format="dimension|reference"/>
+        <!--Long scale width-->
+        <attr name="msrv_gradationLongWidth" format="dimension|reference"/>
+        <!--The distance between the scale and the value-->
+        <attr name="msrv_gradationValueGap" format="dimension|reference"/>
+        <!--Minimum unit spacing-->
+        <attr name="msrv_unitGap" format="dimension|reference"/>
+        <!--Scale value text size-->
+        <attr name="msrv_gradationTextSize" format="dimension|reference"/>
+        <!--Scale value color-->
+        <attr name="zjun_textColor" />
+        <!--Middle pointer color-->
+        <attr name="zjun_indicatorLineColor" />
+        <!--Balance text size-->
+        <attr name="msrv_balanceTextSize" format="dimension|reference"/>
+        <!--Balance text content-->
+        <attr name="msrv_balanceText" format="string|reference"/>
+        <!--The distance between the balance text and the scale-->
+        <attr name="msrv_balanceGap" format="dimension|reference"/>
+        <!--Balance value-->
+        <attr name="msrv_balanceValue" format="integer|reference"/>
+        <!--Maximum value-->
+        <attr name="msrv_maxValue" format="integer|reference"/>
+        <!--Current value-->
+        <attr name="msrv_currentValue" format="integer|reference"/>
+        <!--The smallest unit, the value occupied by every other-->
+        <attr name="msrv_valueUnit" format="integer|reference"/>
+        <!--every interval, change the long scale-->
+        <attr name="msrv_valuePerCount" format="integer|reference"/>
+    </declare-styleable>
+
+    <!--Time Ruler Control-->
+    <declare-styleable name="TimeRuleView">
+        <attr name="zjun_bgColor" />
+        <!--scale color-->
+        <attr name="zjun_gradationColor" />
+        <!--The height of the time block-->
+        <attr name="trv_partHeight" format="dimension|reference" />
+        <!--The color of the time block-->
+        <attr name="trv_partColor" format="color|reference" />
+        <!--Scale width-->
+        <attr name="trv_gradationWidth" format="dimension|reference" />
+        <!--The length of the second scale-->
+        <attr name="trv_secondLen" format="dimension|reference" />
+        <!--The length of the sub-scale-->
+        <attr name="trv_minuteLen" format="dimension|reference" />
+        <!--The length of the time scale-->
+        <attr name="trv_hourLen" format="dimension|reference" />
+        <!--Scale value color-->
+        <attr name="trv_gradationTextColor" format="color|reference" />
+        <!--Scale value size-->
+        <attr name="trv_gradationTextSize" format="dimension|reference" />
+        <!--The distance between the scale value and the time degree-->
+        <attr name="trv_gradationTextGap" format="dimension|reference" />
+        <!--Current time, unit: s-->
+        <attr name="trv_currentTime" format="integer|reference" />
+        <!--The color of the middle pointer line-->
+        <attr name="zjun_indicatorLineColor" />
+        <!--The width of the middle pointer line-->
+        <attr name="zjun_indicatorLineWidth" />
+        <!--The side length of the triangle on the middle pointer-->
+        <attr name="trv_indicatorTriangleSideLen" format="dimension|reference" />
+
+    </declare-styleable>
+
+    <declare-styleable name="ThermometerView">
+        <attr name="viewBg" format="color|reference" /> <!-- background color -->
+        <attr name="unitTextSize" format="dimension" /> <!-- Unit text size -->
+        <attr name="unitTextColor" format="color|reference" /> <!-- Unit text color -->
+        <attr name="scaleTextSize" format="dimension" /> <!-- Scale value text size -->
+        <attr name="scaleTextColor" format="color|reference" /> <!-- Text color of scale value -->
+        <attr name="maxScaleLineColor" format="color|reference" /> <!-- Long scale color -->
+        <attr name="midScaleLineColor" format="color|reference" /> <!-- Medium scale color -->
+        <attr name="minScaleLineColor" format="color|reference" /> <!-- Short scale color -->
+        <attr name="scaleLineWidth" format="float" /> <!-- Scale line width -->
+        <attr name="maxLineWidth" format="float" /> <!-- Long ticks long -->
+        <attr name="midLineWidth" format="float" /> <!-- Medium scale long -->
+        <attr name="minLineWidth" format="float" /> <!-- Short scale long -->
+        <attr name="spaceScaleWidth" format="float" /> <!-- The distance between the scale and the thermometer, the distance between the scale and the text -->
+        <attr name="thermometerBg" format="color|reference" /> <!-- Thermometer color -->
+        <attr name="thermometerShadowBg" format="color|reference" /> <!-- Thermometer shadow color -->
+        <attr name="maxThermometerRadius" format="float" /> <!-- The bottom radius of the thermometer -->
+        <attr name="minThermometerRadius" format="float" /> <!-- Top radius of thermometer -->
+        <attr name="maxMercuryRadius" format="float" /> <!-- The radius of the mercury base -->
+        <attr name="minMercuryRadius" format="float" /> <!-- The radius of the top of mercury -->
+        <attr name="leftMercuryBg" format="color|reference" /> <!-- Mercury background color on the left -->
+        <attr name="rightMercuryBg" format="color|reference" /> <!-- Mercury background color on the right -->
+        <attr name="leftMercuryColor" format="color|reference" /> <!-- The color of mercury on the left -->
+        <attr name="rightMercuryColor" format="color|reference" /> <!-- Mercury color on the right -->
+        <attr name="maxScaleValue" format="float" /> <!-- The maximum value of the thermometer -->
+        <attr name="minScaleValue" format="float" /> <!-- Minimum value of thermometer -->
+        <attr name="curScaleValue" format="float" /> <!-- Current scale value -->
+    </declare-styleable>
+
+</resources>
