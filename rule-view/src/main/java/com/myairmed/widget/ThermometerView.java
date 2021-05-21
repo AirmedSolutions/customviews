@@ -543,6 +543,7 @@ public class ThermometerView extends View {
     // call this method on touch release.
     public void setCelsiusMark(float curValue) {
         setResetCurValue(curValue);
+        changeMercuryColor(curValue);
         invalidate();
         if (valueUpdateListener != null) {
             valueUpdateListener.onValueValidated(curScaleValue);
@@ -613,6 +614,25 @@ public class ThermometerView extends View {
         waveShiftAnim.setDuration(500);
         waveShiftAnim.setInterpolator(new LinearInterpolator());
         waveShiftAnim.start();
+    }
+
+    /*
+    * Change mercury color based on value range
+    * value between 35 to 37 = Green Color
+    * value between 37 to 39 = Orange Color
+    * value between 39 to 42 = Red Color
+    * */
+    private void changeMercuryColor(float value) {
+        if (value <= 37.0 && value >= 35.0) {
+            leftMercuryColor = Color.parseColor("#B2FF59");
+            rightMercuryColor = Color.parseColor("#76FF03");
+        } else if (value <= 39.0 && value > 37.0) {
+            leftMercuryColor = Color.parseColor("#FFAB40");
+            rightMercuryColor = Color.parseColor("#FF9100");
+        } else {
+            leftMercuryColor = Color.parseColor("#FF5252");
+            rightMercuryColor = Color.parseColor("#F44336");
+        }
     }
 
     /**
