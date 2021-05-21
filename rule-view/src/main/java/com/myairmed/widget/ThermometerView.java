@@ -1,6 +1,7 @@
 package com.myairmed.widget;
 
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -524,6 +525,7 @@ public class ThermometerView extends View {
                         }
                     }
                     float newY = keys.get(index);
+                    // thermometerDragListener.onValueUpdated(hmYAxisTemp.get(newY));
                     setCelsiusMark(hmYAxisTemp.get(newY));
                     Log.d(TAG, "onTouchEvent: newY: " + newY + " <> hashmap: " + hmYAxisTemp.toString());
                 }
@@ -532,10 +534,19 @@ public class ThermometerView extends View {
         }
     }
 
+   /* ThermometerDragListener thermometerDragListener;
+
+    public interface ThermometerDragListener {
+        void onValueUpdated(float celcius);
+    }*/
+
     // call this method on touch release.
     public void setCelsiusMark(float curValue) {
         setResetCurValue(curValue);
         invalidate();
+        if (valueUpdateListener != null) {
+            valueUpdateListener.onValueValidated(curScaleValue);
+        }
     }
 
 
@@ -569,9 +580,7 @@ public class ThermometerView extends View {
             curValue = maxScaleValue;
         }
         this.curScaleValue = curValue;
-        if (valueUpdateListener != null) {
-            valueUpdateListener.onValueValidated(curScaleValue);
-        }
+
     }
 
     /**
@@ -597,7 +606,9 @@ public class ThermometerView extends View {
             newValue = maxScaleValue;
         }
 
-        ObjectAnimator waveShiftAnim = ObjectAnimator.ofFloat(this, "curValue", curScaleValue, newValue);
+        @SuppressLint("ObjectAnimatorBinding")
+        ObjectAnimator waveShiftAnim = ObjectAnimator.ofFloat(this,
+                "curValue", curScaleValue, newValue);
         waveShiftAnim.setRepeatCount(0);
         waveShiftAnim.setDuration(500);
         waveShiftAnim.setInterpolator(new LinearInterpolator());
